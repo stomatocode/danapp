@@ -4,6 +4,15 @@
 
 ## Installation
 
+For OSX:
+
+### Install Homebrew if you don't have it
+```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
+
+### Install Erlang and Elixir
+```brew install erlang```
+```brew install elixir```
+
 ### Get dependencies
 ```mix deps.get```
 
