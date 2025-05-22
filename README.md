@@ -5,31 +5,31 @@
 ## Installation
 
 ### Get dependencies
-mix deps.get
+```mix deps.get```
 
 ### Compile the project
-mix compile 
+```mix compile ```
 
 ### Build the CLI executable
-mix escript.build
+```mix escript.build```
 
 ### Make the CLI executable
-chmod +x danapp
+```chmod +x danapp```
 
 ### See help
-./danapp help
+```./danapp help```
 
 ### Store some test data
-./danapp put --key test --value "Hello from macOS"
+```./danapp put --key test --value "Hello from macOS"```
 
 ### Retrieve the data
-./danapp get --key test
+```./danapp get --key test```
 
 ### List all stored data
-./danapp list
+```./danapp list```
 
 ### Start the server in foreground mode
-./danapp server --port 4000
+```./danapp server --port 4000```
 
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
