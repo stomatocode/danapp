@@ -52,6 +52,15 @@ First, make sure previous server is stopped (Ctrl+C)
 ### Later, stop the server when done
 ```./danapp stop```
 
+### See running Erlang/Elixir processes
+```ps aux | grep beam```
+
+### Check open port
+```lsof -i :4000```
+
+### View application logs (if logging to file)
+```cat /tmp/danapp.log  # If you've added file logging```
+
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 by adding `danapp` to your list of dependencies in `mix.exs`:
