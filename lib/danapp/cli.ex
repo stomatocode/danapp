@@ -238,7 +238,7 @@ defmodule Danapp.CLI do
     if is_nil(endpoint) do
       IO.puts("Error: Endpoint is required for API calls")
       IO.puts("Example: ./danapp api users/list --method get")
-      return
+      :ok
     end
 
     method_str = Keyword.get(opts, :method, "get")
