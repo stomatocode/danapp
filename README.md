@@ -4,31 +4,31 @@
 
 ## Installation
 
-# Get dependencies
+### Get dependencies
 mix deps.get
 
-# Compile the project
+### Compile the project
 mix compile 
 
-# Build the CLI executable
+### Build the CLI executable
 mix escript.build
 
-# Make the CLI executable
+### Make the CLI executable
 chmod +x danapp
 
-# See help
+### See help
 ./danapp help
 
-# Store some test data
+### Store some test data
 ./danapp put --key test --value "Hello from macOS"
 
-# Retrieve the data
+### Retrieve the data
 ./danapp get --key test
 
-# List all stored data
+### List all stored data
 ./danapp list
 
-# Start the server in foreground mode
+### Start the server in foreground mode
 ./danapp server --port 4000
 
 
