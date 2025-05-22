@@ -4,7 +4,7 @@
 
 ## Installation
 
-For OSX:
+## For OSX:
 
 ### Install Homebrew if you don't have it
 ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
