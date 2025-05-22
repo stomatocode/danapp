@@ -40,6 +40,18 @@
 ### Start the server in foreground mode
 ```./danapp server --port 4000```
 
+### Starting in daemon mode 
+
+First, make sure previous server is stopped (Ctrl+C)
+### Then start in daemon mode
+```./danapp server --daemon --port 4000```
+
+### Check server status
+```./danapp status```
+
+### Later, stop the server when done
+```./danapp stop```
+
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 by adding `danapp` to your list of dependencies in `mix.exs`:
