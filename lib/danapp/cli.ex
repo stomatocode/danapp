@@ -42,6 +42,11 @@ defmodule Danapp.CLI do
       ]
     )
 
+
+    # Determine the action based on the first argument
+
+    # Server should [...]
+
     action = case action do
       ["server" | _] -> :server
       ["stop" | _] -> :stop
@@ -58,7 +63,7 @@ defmodule Danapp.CLI do
     {opts, action, rest}
   end
 
-  # Run server command
+  # Run server command to start the web server
   defp process_command(:server, opts) do
     port = Keyword.get(opts, :port, 4000)
     daemon = Keyword.get(opts, :daemon, false)

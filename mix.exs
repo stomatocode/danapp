@@ -28,7 +28,11 @@ defmodule Danapp.MixProject do
     [
       {:plug_cowboy, "~> 2.6"},
       {:jason, "~> 1.4"},
-      {:httpoison, "~> 2.0"}
+      {:httpoison, "~> 2.0"},
+      {:oauth2, "~> 2.0"}
     ]
   end
 end
+
+#     {:ollama, "~> 0.1"},  # For AI analysis
+# #     {:calendar, "~> 0.1"} # For calendar analysis
