@@ -5,7 +5,7 @@ defmodule Danapp.OAuthClient do
   # Configuration - replace with your actual values from NetSapiens documentation
   @client_id "danapp"
   @client_secret "65b7a46345c709181d4b496a8a00c71a"
-  @redirect_uri "https://your-domain.com/oauth/callback"
+  @redirect_uri "http://localhost:4000/oauth/callback"
   @authorization_url "https://auth.netsapiens.com/oauth/authorize"
   @token_url "https://auth.netsapiens.com/oauth/token"
   @scope "read write"  # Adjust based on NetSapiens docs
@@ -26,6 +26,53 @@ defmodule Danapp.OAuthClient do
     query = URI.encode_query(params)
     @authorization_url <> "?" <> query
   end
+
+
+  # # Environment-specific redirect URI configuration
+  # defp get_redirect_uri do
+  #   case Mix.env() do
+  #     :dev ->
+  #       # For local development
+  #       "http://localhost:4000/oauth/callback"
+
+  #     :test ->
+  #       # For testing
+  #       "http://localhost:4001/oauth/callback"
+
+  #     :prod ->
+  #       # For production - get from environment variable
+  #       System.get_env("OAUTH_REDIRECT_URI") || "https://yourdomain.com/oauth/callback"
+  #   end
+  # end
+
+  # # Alternative: Configure based on your deployment
+  # defp get_redirect_uri_advanced do
+  #   base_url = case System.get_env("DEPLOYMENT_ENV") do
+  #     "local" -> "http://localhost:4000"
+  #     "staging" -> "https://staging.yourdomain.com"
+  #     "production" -> "https://yourdomain.com"
+  #     _ -> "http://localhost:4000"  # fallback
+  #   end
+
+  #   base_url <> "/oauth/callback"
+  # end
+
+  # # Use the dynamic redirect URI
+  # def get_authorize_url do
+  #   params = %{
+  #     client_id: get_client_id(),
+  #     redirect_uri: get_redirect_uri(),
+  #     response_type: "code",
+  #     scope: get_scope(),
+  #     state: generate_state()  # CSRF protection
+  #   }
+
+  #   query = URI.encode_query(params)
+  #   get_authorization_url() <> "?" <> query
+  # end
+
+
+
 
   def exchange_code_for_token(code) do
     GenServer.call(__MODULE__, {:exchange_code, code})
